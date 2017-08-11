@@ -1,15 +1,28 @@
 var gulp             = require('gulp');
-var cleanCSS         = require('gulp-clean-css');
-var concatCss        = require('gulp-concat-css');
-var concat           = require('gulp-concat');
-var uglify           = require('gulp-uglify');
-var include          = require("gulp-include");
 var babel            = require('gulp-babel');
-var strip            = require('gulp-strip-comments');
-var removeEmptyLines = require('gulp-remove-empty-lines');
-var trimLines        = require('gulp-trimlines');
 var clean            = require('gulp-clean');
+var concat           = require('gulp-concat');
 var rename           = require('gulp-rename');
-var htmlmin          = require('gulp-htmlmin');
+var uglify           = require('gulp-uglify-es').default; // works with ES6
 var inject           = require('gulp-js-text-inject'); // used to parse out using RegExp ( @@import {filename.**} ) in javascript files and replacing them with inline contents from those filename.**
-var plumber          = require('gulp-plumber');//Use .pipe(plumber()) and place it in the beginning after source to debug if needed
+// /*******************************Minify Core Metrics**************************/
+gulp.task('clean', function() {
+    return gulp.src([
+          'js/min/*',
+          'js/max/*'
+        ], {read: false})
+        .pipe(clean({force: true}))
+});
+
+gulp.task('scripts', ['clean'],function() {
+    return gulp.src(['js/*.js'])
+        .pipe(concat('main.max.js'))
+        .pipe(gulp.dest('js/max'))
+        .pipe(uglify())
+        .pipe(concat('main.min.js'))
+        .pipe(gulp.dest('js/min'))
+});
+
+gulp.task('build', ['clean','scripts'], function() {
+    // place code for your default task here
+});
