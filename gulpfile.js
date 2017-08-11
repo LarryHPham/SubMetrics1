@@ -15,7 +15,10 @@ gulp.task('clean', function() {
 });
 
 gulp.task('scripts', ['clean'],function() {
-    return gulp.src(['js/*.js'])
+    return gulp.src([
+                  'node_modules/core-metrics/js/max/main.max.js',
+                  'js/*.js'
+                ])
         .pipe(concat('main.max.js'))
         .pipe(gulp.dest('js/max'))
         .pipe(uglify())
