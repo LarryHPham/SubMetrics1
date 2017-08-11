@@ -1,7 +1,7 @@
 {
-  "name": "SubMetrics",
-  "version": "0.0.1",
-  "description": "CORE METRICS FOR SNT",
+  "name": "sub-metrics",
+  "version": "0.0.3",
+  "description": "SUB METRICS FOR SNT",
   "main": "./js/sub-metrics.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
