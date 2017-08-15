@@ -16,7 +16,7 @@ gulp.task('clean', function() {
 
 gulp.task('scripts', ['clean'],function() {
     return gulp.src([
-                  'node_modules/core-metrics/js/max/main.max.js',
+                  'node_modules/core-metrics/js/max/main.max.js', // note this is pulled from another private repo location can be found in the SubMetric1/package.json
                   'js/*.js'
                 ])
         .pipe(concat('main.max.js'))
