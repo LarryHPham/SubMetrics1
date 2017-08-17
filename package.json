@@ -15,5 +15,6 @@
   "bugs": {
     "url": "https://github.com/LarryHPham/SubMetrics/issues"
   },
-  "homepage": "https://github.com/LarryHPham/SubMetrics#readme"
+  "homepage": "https://github.com/LarryHPham/SubMetrics#readme",
+  "devDependencies": {}
 }
