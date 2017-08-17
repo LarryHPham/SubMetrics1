@@ -16,17 +16,4 @@
     "url": "https://github.com/LarryHPham/SubMetrics/issues"
   },
   "homepage": "https://github.com/LarryHPham/SubMetrics#readme",
-  "dependencies": {
-    "core-metrics": "git+https://github.com/LarryHPham/CoreMetrics#0.0.5"
-  },
-  "devDependencies": {
-    "babel-preset-es2015": "^6.18.0",
-    "gulp": "^3.9.1",
-    "gulp-babel": "^6.1.2",
-    "gulp-clean": "^0.3.2",
-    "gulp-concat": "^2.6.1",
-    "gulp-js-text-inject": "^1.1.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-uglify-es": "^0.1.3"
-  }
 }
